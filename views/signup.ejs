@@ -1,0 +1,36 @@
+<%- include('partials/header.ejs') %>
+
+
+
+<main>
+    <div class="header">
+        <h1>Login to Your Account <br><span class="arrow">&#8595;</span></h1>
+    </div>
+
+    <div class="myform">
+        <div class="add">
+            <form action="/signup" method="post">
+                <div class="first-class">
+                    <div>
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" required>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                  
+                </div>
+                <div class="btn">
+                    <button class="btn-submit" type="submit">Login</button>
+                </div>
+            </form>
+            <form action="/register" method="get">
+                <button class="btn-sign">Creat New Account</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+
+
+
+<%- include('partials/footer.ejs') %>

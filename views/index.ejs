@@ -1,0 +1,79 @@
+<%- include('partials/header.ejs') %>
+   
+<nav>
+    <div class="title-container">
+    <div class="title"><h1><img src="/book-stack.png" width="30" height="30"> myBooks</h1></div>
+</div>
+    <div class="nav-element">
+        <ul>
+            <li>Home</li>
+            <li>contact</li>
+            <li>About us</li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <div class="header">
+        <h1>Your favourit Books <br> Down Here <br><span class="arrow">&#8595;</span>
+        </h1>
+    </div>
+    <form class="btn-add" action="/adding" method="get">
+   <button ><i class="fa-solid fa-plus"></i> add New Book</button>
+</form>
+   
+   
+
+
+  
+
+
+<% if(locals.books && books.length > 0){%>
+<% books.forEach(book => {%>
+    <div class="card">
+        <div class="card-body">
+            <div class="card-look">
+<div class="notes-section">
+    <label for=""><i class="fas fa-book"></i> Title</label>
+    <p> <%=book.title %></p>
+    <label for=""><i class="fa fa-user-tie"></i> Author</label>
+    <p> <%=book.author %></p>
+    <label for=""><i class="fa fa-sticky-note"></i> Notes</label>
+    <p class="notes"><%= book.notes%></p>
+    <label for=""><i class="fa fa-star"></i> Rates</label>
+    <p><%=book.rates %> / 5</p>
+    <label for=""><i class="fa fa-calendar-alt"></i> Date Read</label>
+    <p><%= new Date(book.date_read).toLocaleDateString() %></p>
+</div>
+<div>
+    <img src="https://covers.openlibrary.org/b/isbn/<%=book.isbn%>-L.jpg" width="300" height="450" alt="">
+</div>
+            </div>
+         
+        
+          
+        <div class="btns">
+            <form action="/delete/<%= book.id %>" method="post">
+                <button class="delete" type="submit"><i class="fa-solid fa-trash"></i> Delete</button>
+            </form>
+           <form action="/edit/<%=book.id %>" method="get">
+                <button class="edit" type="submit"><i class="fa-solid fa-edit"></i> Edit</button>
+            </form> 
+        </div>
+            
+        </div>
+       
+    </div>
+   
+  
+<%}); %>
+<%}else{%>
+  <h1>no books Yet ... </h1>
+<%}%>
+</main>
+
+
+
+
+
+<%- include('partials/footer.ejs') %>

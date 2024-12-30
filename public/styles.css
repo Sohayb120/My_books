@@ -1,0 +1,284 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Kite One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #9B7EBD;
+  background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
+}
+
+nav {
+  display: flex;
+  color: #ffff;
+  justify-content: space-between;
+  margin: 0 5% 0 5%;
+  height: 8vh;
+  background-color: #c1a3d7;
+  padding: 0 10px 0 10px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+nav > .title-container >.title {
+  margin: 0;
+  color: #ffff;
+  letter-spacing: 2px;
+}
+
+.nav-element > ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-element > ul > li {
+  padding: 10px;
+  font-size: 20px;
+}
+
+main {
+  flex: 1;
+  margin: 0 5% 0 5%;
+  background-color: #bb94ca84;
+  background-image: url("https://www.transparenttextures.com/patterns/circles.png");
+}
+
+main > .header > h1 {
+  margin: 0;
+  color: #e7e3ed;
+  padding: 5%;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.arrow {
+  font-size: 4rem;
+  color: #e7e3ed;
+}
+
+.myform {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+input[type="text"],input[type="password"] {
+  width: 300px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+
+input[type="textarea"] {
+  width: 300px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+label {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input[type="date"] {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 99%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  resize: vertical;
+  font-family: "Kite One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+select {
+  width: 120px;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  appearance: none;
+  cursor: pointer;
+}
+
+.first-class {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.second-class {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.add {
+  padding: 1rem;
+  border: 2px solid #FFD2A0;
+  border-radius: 20px;
+}
+
+.btn-submit {
+  padding: 10px;
+  background-color: rgb(101, 204, 101);
+  color: #ffff;
+  border: 1px rgb(18, 191, 9) solid;
+  border-radius: 20px;
+  margin-top: 1rem;
+  letter-spacing: 1px;
+}
+
+.btn-sign {
+  border: 1px transparent solid;
+  background-color: transparent;
+  color: #3584ec;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.btn {
+  display: flex;
+  justify-content: end;
+}
+
+.card {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.card-body {
+  padding: 2rem;
+  width: 600px;
+  border: 2px solid #FFD2A0;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card-look {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.card p {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+}
+.card img{
+  border: whitesmoke 5px solid;
+  border-radius: 20px;
+}
+
+.btn-add {
+  text-align: center;
+}
+
+.btn-add > button {
+  padding: 0.6rem;
+  background-color: rgb(114, 177, 19);
+  color: #ffff;
+  border: #f4f4f4 solid 1px;
+  border-radius: 20px;
+  font-size: larger;
+}
+
+p {
+  font-size: larger;
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.delete {
+  padding: 0.7rem;
+  background-color: red;
+  color: #ffff;
+  border: 1px solid white;
+  border-radius: 20px;
+  width: 100px;
+}
+
+.edit {
+  padding: 0.8em;
+  width: 100px;
+  background-color: rgb(114, 177, 19);
+  color: #ffff;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+
+.btns {
+  display: flex;
+  justify-content: end;
+}
+
+button {
+  cursor: pointer;
+}
+
+.notes-section label > i {
+  color: #737074;
+}
+
+footer {
+  display: flex;
+  color: #ffffff;
+  font-size: larger;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5% 0 5%;
+  height: 8vh;
+  background-color: #c1a3d7;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .nav-element > ul {
+    display: none;
+    
+  }
+ .title-container{
+
+  width: 100%;
+display: flex;
+justify-content: center;
+  }
+}

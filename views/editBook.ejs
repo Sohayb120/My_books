@@ -1,0 +1,87 @@
+<%- include('partials/header.ejs') %>
+ 
+<nav>
+    <div class="title"><h1><img src="/book-stack.png" width="30" height="30"> myBooks</h1></div>
+    
+    <div class="nav-element">
+        <ul>
+            <li>Home</li>
+            <li>contact</li>
+            <li>About us</li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <div class="header">
+        <h1>Edit <span style="color: cornflowerblue; font-size: larger;"><%=books[0].title%></span>  book<br> Down Here <br><span class="arrow">&#8595;</span>
+        </h1>
+    </div>
+  
+   <div class="myform">
+    <div class="add">
+        <% if(locals.books) { %>
+            <% books.forEach(book => { %>
+               <form action="/edit/<%= book.id %>" method="post">
+                  <div class="first-class">
+                     <div>
+                        <label for="">Title</label>
+                        <input value="<%= book.title %>" type="text" name="title">
+                     </div>
+                     <div>
+                        <label for="">Author</label>
+                        <input value="<%= book.author %>" type="text" name="author">
+                     </div>
+                  </div>
+                  <div>
+                     <label for="">Notes</label>
+                     <textarea name="notes"><%= book.notes %></textarea>
+                  </div>
+                  <div class="second-class">
+                     <div>
+                        <label for="">Rate</label>
+                        <select name="rate" id="">
+                           <option value="" disabled>Select rating</option>
+                           <option value="1" <%= book.rate == 1 ? 'selected' : '' %>>1</option>
+                           <option value="2" <%= book.rate == 2 ? 'selected' : '' %>>2</option>
+                           <option value="3" <%= book.rate == 3 ? 'selected' : '' %>>3</option>
+                           <option value="4" <%= book.rate == 4 ? 'selected' : '' %>>4</option>
+                           <option value="5" <%= book.rate == 5 ? 'selected' : '' %>>5</option>
+                        </select>
+                     </div>
+                     <div>
+                        <label for="">Date</label>
+                        <input name="date_read" type="date" value="<%= new Date(book.date_read).toISOString().slice(0, 10) %>">
+                     </div>
+                     <div>
+                        <label for="">ISBN</label>
+                        <input value="<%= book.isbn %>" type="text" name="isbn">
+                     </div>
+                  </div>
+                  <div class="btn">
+                     <button class="btn-submit" type="submit">Save Changes</button>
+                  </div>
+               </form>
+            <% }); %>
+         <% } %>
+         
+          
+    </div>
+        
+        
+    </div>
+
+
+  
+
+</main>
+
+
+<%- include('partials/footer.ejs') %>
+
+
+
+
+
+
+

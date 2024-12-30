@@ -1,0 +1,82 @@
+<%- include('partials/header.ejs') %>
+   
+<nav>
+    <div class="title"><h1><img src="/book-stack.png" width="30" height="30"> myBooks</h1></div>
+    
+    <div class="nav-element">
+        <ul>
+            <li>Home</li>
+            <li>contact</li>
+            <li>About us</li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <div class="header">
+        <h1>Add Your favourit Books <br> Down Here <br><span class="arrow">&#8595;</span>
+        </h1>
+    </div>
+  
+   <div class="myform">
+    <div class="add">
+        <form action="/add" method="post">
+            <div class="first-class">
+               <div>
+                   <label for="">Title</label>
+                   <input type="text" name="title">
+               </div>
+               <div>
+                   <label for="">Author</label>
+                   <input type="text" name="author">
+               </div>
+            </div>
+            <div>
+               <label for="">Notes</label>
+               <textarea name="notes"></textarea>
+           </div>
+               <div class="second-class">
+                  
+                   <div>
+                       <label for="">Rates</label>
+                       <select name="rate" id="">
+                      <option value="" disabled selected>Select rating</option>
+                       <option value="1">1</option>
+                       <option value="2">2</option>
+                       <option value="3">3</option>
+                       <option value="4">4</option>
+                       <option value="5">5</option>
+                   </select>
+               </div>
+                   <div>
+                       <label for="">Date Read</label>
+                        <input type="date" name="date_read">
+                   </div>
+                   <div>
+                       <label for="">lSBN</label>
+                       <input type="text" name="isbn">
+                   </div>
+               </div>
+                  <div class="btn">
+                    <button class="btn-submit" type="submit"> Add Book</button>
+                  </div>
+                  
+                  
+              
+           </form>
+          
+    </div>
+        
+        
+    </div>
+
+
+  
+
+</main>
+
+
+
+
+
+<%- include('partials/footer.ejs') %>
